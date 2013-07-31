@@ -1,0 +1,25 @@
+body {
+	width: 100%
+	margin: 0px auto;
+}
+
+* {
+	font-family: Helvetica;
+	color: blue;
+}
+
+#middle {
+	width: 370px;
+	margin: 0px auto;
+}
+
+.box {
+	height: 400px;
+	float: left;
+}
+
+#sign_in {
+	padding-right: 50px;
+	margin-right: 50px;
+	border-right: 1px solid black;
+}

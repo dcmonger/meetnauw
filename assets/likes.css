@@ -1,0 +1,11 @@
+* {
+	font-family: Helvetica;
+}
+
+#pic {
+	background-image:url('james_franco.jpg');
+	background-size: ;
+	width: 150px;
+	height: 200px;
+	border: 1px solid red;
+}

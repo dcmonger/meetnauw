@@ -1,0 +1,67 @@
+* {
+	font-family: Helvetica;
+	color: white;
+}
+
+#banner {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+}
+
+#back {
+	position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    min-width: 50%;
+    min-height: 50%;
+}
+
+#middle {
+	left: 0px;
+	width: 100%;
+	top: 35%;
+	position: absolute;
+	height: 45%;
+}
+
+#box {
+	left: 0px;
+	position: absolute;
+	background-color: white;
+	opacity: 0.3;
+	height: 100%;
+	width: 100%;
+}
+
+h1 {
+	font-size: 90px;
+	float: left;
+	margin-top: -10px;
+}
+
+p {
+	width: 330px;
+	float: left;
+	margin-left: 15px;
+	font-size: 30px;
+	margin-top: 10px;
+}
+
+button {
+	float: left;
+	color: red;
+	margin-top: 20px;
+	background-color: white;
+	height: 30px;
+	font-size: 20px;
+	font-weight: bold;
+	border: 0px;
+	border-radius: 10px;
+}
+
