@@ -9,16 +9,22 @@
 </head>
 <body>
 	<div id='pic'>
-		awfsdzc;jx
 	</div>
-	<h1>Your Name</h1>
+	<h1>James Franco</h1>
+	<div id='scrolling_likes_bar'>
+		in here will go some tags that scroll through themselves maybe?
+	</div>
 	<h2>Likes</h2>
 	<div id='likes'>
 		<div class='a_like'>
 			<!--this one is a sample-->
-			Berry-picking
+			1 - Berry-picking
 		</div>
 	<!-- here will be pulled from the database -->
 	</div>
+	<form>
+		<input type='text' value='Enter other likes here'>
+		<input type='submit' value='Add a like'>
+	</form>
 </body>
 </html>

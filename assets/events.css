@@ -1,0 +1,17 @@
+h1 {
+	margin-left: 40px;
+}
+
+#events {
+	height: 200px;
+	width: 80%;
+	border: 1px solid black;
+	margin-left: 40px;
+	margin-top: 40px;
+}
+
+#add_event {
+	margin-top: 100px;
+	margin-left: 40px;
+	margin-bottom: 100px;
+}

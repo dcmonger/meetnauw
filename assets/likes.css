@@ -4,8 +4,34 @@
 
 #pic {
 	background-image:url('james_franco.jpg');
-	background-size: ;
+	background-repeat: no-repeat;
+	background-size: 70%;
 	width: 150px;
 	height: 200px;
-	border: 1px solid red;
+	margin: 20px;
+	float: left;
+}
+
+h1 {
+	float: left;
+}
+
+#scrolling_likes_bar {
+	height: 20px;
+	width: 100%;
+	border: 1px solid black;
+	clear: both;
+}
+
+h2, .a_like {
+	color: white;
+	background-color: #0B545D;
+	clear: both;
+	width: 300px;
+	margin-left: 200px;
+}
+
+form {
+	margin-top: 50px;
+	margin-left: 200px;
 }
