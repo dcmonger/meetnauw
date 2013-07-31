@@ -4,12 +4,12 @@ class User_model extends CI_Model
 {
 	public function get_user($user)
 	{
-		return $this->db->where('email', $user[]'email')
+		return $this->db->where('email', $user['email'])
 						->where('password', $user['password'])
 						->get("users")
 						->row();
 
-		return $this->db-?query("SELECT *
+		return $this->db->query("SELECT *
 								 FROM users
 								 WHERE email = '{$user['email']}'
 								 AND password = '{$user['password']}'"
