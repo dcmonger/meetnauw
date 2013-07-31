@@ -9,12 +9,25 @@
 </head>
 <body>
 	<h1>Events in Your Area</h1>
-	<div id='events'></div>
+	<div id='events'>
+		<div class='event'>
+			<div id='event_pic'></div>
+			<p> This is some sample text about an event. You have 40% compatibility with this group and 75% max compatibility with any one person in this group</p>
+		</div>
+		<div class='event'>
+			<div id='event_pic'></div>
+			<p> This is some sample text about an event. You have 60% compatibility with this group and 72% max compatibility with any one person in this group</p>
+		</div>
+		<div class='event'>
+			<div id='event_pic'></div>
+			<p> This is some sample text about an event. You have 50% compatibility with this group and 68% max compatibility with any one person in this group</p>
+		</div>
+	</div>
 	<div id='add_event'>
 		<h2>Suggest an Event</h2>
 		<form>
 			<input type='text' value='Event Title'><br /><br />
-			<input type='textarea' value='Event Description'>
+			<textarea rows='4' cols='40' value='Event Description'></textarea>
 		</form>
 	</div>
 </body>

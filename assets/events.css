@@ -8,6 +8,25 @@ h1 {
 	border: 1px solid black;
 	margin-left: 40px;
 	margin-top: 40px;
+	overflow: scroll;
+}
+
+#event_pic {
+	background-image: url('james_franco.jpg');
+	background-repeat: no-repeat;
+	width: 100px;
+	height: 100px;
+	float: left;
+}
+
+#events p {
+	float: left;
+	width: 600px;
+
+}
+
+.event {
+	clear: both;
 }
 
 #add_event {
