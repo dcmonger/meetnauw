@@ -1,3 +1,22 @@
+#banner {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+}
+
+#back {
+	position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    min-width: 50%;
+    min-height: 50%;
+}
+
 h1 {
 	margin-left: 40px;
 }
@@ -6,23 +25,26 @@ h1 {
 	height: 200px;
 	width: 80%;
 	border: 1px solid black;
+	border-radius: 5px;
 	margin-left: 40px;
 	margin-top: 40px;
 	overflow: scroll;
 }
 
-#event_pic {
-	background-image: url('james_franco.jpg');
-	background-repeat: no-repeat;
-	width: 100px;
+img {
+	margin-top: 20px;
+	margin-left: 20px;
+	width: 80px;
 	height: 100px;
 	float: left;
 }
 
-#events p {
+.event p {
+	margin-top: 20px;
 	float: left;
 	width: 600px;
-
+	margin-bottom: 20px;
+	margin-left: 30px;
 }
 
 .event {
@@ -33,4 +55,8 @@ h1 {
 	margin-top: 100px;
 	margin-left: 40px;
 	margin-bottom: 100px;
+}
+
+#event_title {
+	width: 400px;
 }
