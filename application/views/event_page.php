@@ -26,8 +26,8 @@
 	<div id='add_event'>
 		<h2>Suggest an Event</h2>
 		<form>
-			<input type='text' value='Event Title'><br /><br />
-			<textarea rows='4' cols='40' value='Event Description'></textarea>
+			<input type='text' value='Event Title'><button>Add Event</button><br /><br />
+			<textarea rows='4' cols='40' value='Event Description'>Event Description</textarea>
 		</form>
 	</div>
 </body>

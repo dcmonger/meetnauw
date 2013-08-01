@@ -84,11 +84,13 @@ class User extends CI_Controller
 	{
 		$this->load->library('form_validation');
 
-		$this->form_validation->set_rules('username', 'Username', 'trim|required|min_length[5]|max_length[12]|xss_clean', 'callback_username_check');
+		$this->form_validation->set_rules('first_name', 'First Name', 'required|alpha');
 
-		$this->form_validation->set_rules('password', 'Password', 'trim|required|matches[passconf]|md5');
+		$this->form_validation->set_rules('last_name', 'Last Name', 'required|alpha');
+
+		$this->form_validation->set_rules('password', 'Password', 'trim|required|matches[confirm_password]|min_length[6]|md5');
 		
-		$this->form_validation->set_rules('passconf', 'Password Confirmation', 'trim|required');
+		$this->form_validation->set_rules('confirm_password', 'Password Confirmation', 'trim|required');
 		
 		$this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
 		
@@ -96,11 +98,24 @@ class User extends CI_Controller
 		{
 			echo validation_errors();
 		}
+		else
+		{
+			$this->load->model('user');
+			$this->user->register($data);
+			echo "New User Created";
+		}	
 	}
 	public function logout()
 	{
 		$this->session->sess_destroy();
 		redirect(base_url('/user/login'));
+	}
+	public function login()
+	{
+		$data = $this->input->post();
+		$password = $data['password'];
+		$email = $email['email'];
+		
 	}
 }
 
