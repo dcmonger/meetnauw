@@ -4,7 +4,9 @@
 <body>
 	<div id='banner'>
 		<img id="back" src="assets/jumpingpeople.jpg" alt="banner">
+		<div id='stuff_back'></div>
 	</div>
+	<div id='stuff_wrapper'>
 	<div class='navbar navbar-inverse'>
 		<form class="navbar-form pull-right">
 		  <button type="submit" class="btn btn-default">Profile</button>
@@ -26,6 +28,7 @@
 			<input type='text' class="form-control" placeholder='Enter other likes here'><br />
 			<button type="submit" class="btn btn-default">Add a Like</button>
 		</form>
+	</div>
 	</div>
 </body>
 </html>

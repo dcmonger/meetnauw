@@ -4,7 +4,9 @@
 <body>
 	<div id='banner'>
 		<img id="back" src="assets/jumpingpeople.jpg" alt="banner">
+		<div id='stuff_back'></div>
 	</div>
+	<div id='stuff_wrapper'>
 	<div class='navbar navbar-inverse'>
 		<form class="navbar-form pull-right">
 		  <button type="submit" class="btn btn-default">Profile</button>
@@ -35,6 +37,7 @@
 			<textarea rows='4' cols='40' value='Event Description'></textarea class="form-control"><br /><br />
 			<input type='submit' value='Add an Event' class="btn btn-default">
 		</form>
+	</div>
 	</div>
 </body>
 </html>

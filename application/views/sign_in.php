@@ -4,7 +4,9 @@
 <body>
 	<div id='banner'>
 		<img id="back" src="assets/jumpingpeople.jpg" alt="banner">
+		<div id='stuff_back'></div>
 	</div>
+	<div id='stuff_wrapper'>
 	<div class='navbar navbar-inverse'>
 		<form class="navbar-form pull-right">
 		  <input type="text" class="form-control" style="width: 200px;" placeholder='Email'>
@@ -31,6 +33,7 @@
 				<button type="submit" class="btn btn-default">Sign Up</button>
 			</form>
 		</div>
+	</div>
 	</div>
 
 </body>
