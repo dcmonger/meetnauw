@@ -8,7 +8,7 @@ class User extends CI_Controller
         $this->output->enable_profiler(TRUE);
 	}
 	public function process_login()
-	{
+	{  
         $this->load->model("users_model");
         $data = array();
         $data['password'] = md5($this->input->post('password'));
@@ -17,6 +17,7 @@ class User extends CI_Controller
         if ($user)
         {
             $this->session->set_userdata('user_session', $user);
+            $this->session->set_userdata('id', $user[0]->id);
             redirect(base_url('/user/profile'));
         }
 		else
@@ -64,8 +65,13 @@ class User extends CI_Controller
     {
         $this->load->view("likes_sorter");
     }
+    public function events()
+    {
+        $this->load->view('event_page');
+    }
     public function edit_profile()
     {
+        $this->output->enable_profiler(TRUE);
     	$this->load->library('form_validation');
         $this->form_validation->set_rules('first_name', 'First Name', 'required|alpha');
         $this->form_validation->set_rules('last_name', 'Last Name', 'required|alpha');
