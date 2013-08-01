@@ -15,6 +15,7 @@
 		<p>Meet friends in your area with your interests</p>
 		<button href="#">Find out more</button>
 		<button href="#">Sign In</button>
+		
 	</div>
 </body>
 </html>
