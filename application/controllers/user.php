@@ -59,13 +59,9 @@ class User extends CI_Controller
 	public function process_login()
 	{
 		$this->load->library('form_validation');
-
 		$this->form_validation->set_rules('username', 'Username', 'required');
-		
 		$this->form_validation->set_rules('password', 'Password', 'required');
-		
 		$this->form_validation->set_rules('email', 'Email', 'required');
-
 		if($this->form_validation->run() === FALSE)
 		{
 			echo validation_errors();
@@ -83,17 +79,11 @@ class User extends CI_Controller
 	public function process_registration()
 	{
 		$this->load->library('form_validation');
-
 		$this->form_validation->set_rules('first_name', 'First Name', 'required|alpha');
-
 		$this->form_validation->set_rules('last_name', 'Last Name', 'required|alpha');
-
 		$this->form_validation->set_rules('password', 'Password', 'trim|required|matches[confirm_password]|min_length[6]|md5');
-		
 		$this->form_validation->set_rules('confirm_password', 'Password Confirmation', 'trim|required');
-		
 		$this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
-		
 		if($this->form_validation->run() === FALSE)
 		{
 			echo validation_errors();
