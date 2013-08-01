@@ -2,78 +2,26 @@
 
 class User extends CI_Controller
 {
-	public $username;
-	public $view_data;
-
 	public function __construct()
 	{
 		parent::__construct();
-		$this->username = "{$user['first_name']}"
-	}
-	public function profile()
-	{
-		echo "Welcome back to your profile " .$this->user_session['first_name'];
-	}
-	public function index()
-	{
-		echo "This is the default page";
-		echo $this->get_name();
-	}
-	public function get_name()
-	{
-		return " Johnny";
-	}
-	public function get_user()
-	{
-		$user = array(
-			'email' => 'john@john.com',
-			'password' => md5('sample_password')
-		);
-		$this->load->model('User_model');
-		$user = $this->User_model->get_user($user_details);	
-
-		var_dump($user);
-
-		echo $user->first_name;
-		
-	}
-	public function login()
-	{
-		$user_details = array(
-			'email'=> 'john@john.com',
-			'password' => md5('sample_password')
-			);
-		
-		$this->load->model('User_model');
-		$user = $this->User_model->get_user($user_details);
-
-		$this->view_data = array(
-			'first_name' => $user->first_name,
-			'last_name' => $user->last_name,
-			'email' => $user->email
-			);
-		$this->load->view('login_view', $this->view_data);
-	
-		// $this->load->view('login_view');
+        $this->output->enable_profiler(TRUE);
 	}
 	public function process_login()
 	{
-		$this->load->library('form_validation');
-		$this->form_validation->set_rules('username', 'Username', 'required');
-		$this->form_validation->set_rules('password', 'Password', 'required');
-		$this->form_validation->set_rules('email', 'Email', 'required');
-		if($this->form_validation->run() === FALSE)
-		{
-			echo validation_errors();
-		}
+        $this->load->model("users_model");
+        $data = array();
+        $data['password'] = md5($this->input->post('password'));
+        $data['email'] = $this->input->post('email');
+        $user = $this->users_model->login($data);
+        if ($user)
+        {
+            $this->session->set_userdata('user_session', $user);
+            redirect(base_url('/user/profile'));
+        }
 		else
 		{
-			$user = array('id' => 1,
-						  'email' =>'john@john.com',
-						  'login_status' => TRUE
-						  );
-			$this->session->set_userdata('user_session', $user);
-			redirect(base_usl('/user/profile'));
+            $this->load->view("sign_in");
 		}
 	}
 	public function process_registration()
@@ -86,13 +34,24 @@ class User extends CI_Controller
 		$this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
 		if($this->form_validation->run() === FALSE)
 		{
-			echo validation_errors();
+            $this->load->view('sign_in');
 		}
 		else
 		{
-			$this->load->model('user');
-			$this->user->register($data);
-			echo "New User Created";
+			$this->load->model('users_model');
+            $data = array();
+            $data['first_name'] = $this->input->post('first_name');
+            $data['last_name'] = $this->input->post('last_name');
+            $data['password'] = $this->input->post('password');
+            $data['email'] = $this->input->post('email');
+            $data['created_at'] = date('Y-m-d'); 
+            $this->users_model->register_user($data);
+			$user = array('email' => $data['email'],
+                          'first_name' => $data['first_name'],
+						  'login_status' => TRUE
+						  );
+			$this->session->set_userdata('user_session', $user);
+            redirect(base_url('/user/profile'));
 		}	
 	}
 	public function logout()
@@ -100,13 +59,10 @@ class User extends CI_Controller
 		$this->session->sess_destroy();
 		redirect(base_url('/user/login'));
 	}
-	public function login()
-	{
-		$data = $this->input->post();
-		$password = $data['password'];
-		$email = $email['email'];
-		
-	}
+
+    public function profile() {
+        $this->load->view("event_page");
+    }
 }
 
 

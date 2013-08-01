@@ -1,7 +1,12 @@
 <?php
 
-class User_model extends CI_Model
+class Users_model extends CI_Model
 {
+    function __construct()
+    {
+        parent::__construct();
+    }
+
 	public function get_user($user)
 	{
 		return $this->db->where('email', $user['email'])
@@ -19,6 +24,16 @@ class User_model extends CI_Model
 	{
 		return $this->db->insert('users', $user);
 	}
+    public function login($user)
+    {
+        $query = $this->db->get_where('users', $user);
+
+        if ($query->num_rows() == 1) {
+            return $query->result();
+        }else {
+            return false;
+        }
+    }
 }
 
 ?>
