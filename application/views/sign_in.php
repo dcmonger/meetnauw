@@ -18,12 +18,13 @@
 	<div id="middle">
 
 		<div id='info'>
-			<p><b>Lorem ipsum</b> dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-			<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-			<p><b>Exepteur sint occaecat </b>cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+			<h1>Meetnauw</h1>
+			<p><b>Meetnauw</b> is an easy and no pressure way to meet people in your area that share your interests, be it web development or kite-surfing. </p>
+			<p>When you sign up, you'll fill out a form with all the boring information, then get to pick out your interests. These interests will help us match you up with people you'll like. </p>
+			<p>You can browse the events page to find out what's happening in your area. We'll let you know how compatible you'll be with the people who are going to these events as a group, as well as how compatible you'll be with any one person in the group. So go sign up! Meetnauw! </p>
 		</div>
 		<div id='sign_up'>
-			<h1>Sign Up</h1>
+			<h2>Sign Up</h2>
 			<form action='' method='post'>
 				<input type='text' class="form-control" placeholder='First Name'><br />
 				<input type='text' class="form-control" placeholder='Last Name'><br />

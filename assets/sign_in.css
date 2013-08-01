@@ -32,12 +32,21 @@
 	z-index: -2;
 }
 
+h1 {
+	font-size: 100px;
+	margin-top: -20px;
+}
+
 #info {
 	width: 500px;
 	float: left;
 	margin-left: 100px;
 	margin-top: 40px;
 
+}
+
+#info p {
+	font-size: 20px;
 }
 
 #sign_up {
