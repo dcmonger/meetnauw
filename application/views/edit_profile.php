@@ -3,7 +3,7 @@
         <div id='edit_info'>
             <h2>Edit info</h2>
             <? echo validation_errors();?>
-            <? echo form_open('user/process_registration') ?>
+            <? echo form_open('user/edit_profile') ?>
                 <input type='text' name = "first_name" class="form-control" placeholder='First Name'><br />
                 <input type='text' name = "last_name" class="form-control" placeholder='Last Name'><br />
                 <input type='text' name = "email" class="form-control" placeholder='Email'><br />

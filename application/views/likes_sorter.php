@@ -2,7 +2,7 @@
 <?php $this->load->view('partials/normal_navbar') ?>
     <img id = 'face' src= 'assets/img/james_franco.jpg' alt='james franco' class="img-rounded">
     <h1 id='likes_title_1'>James Franco</h1>
-    <button type="submit" id='edit_prof' class="btn btn-default">Edit Profile</button>
+    <a class="btn btn-default" href="<?= base_url() ?>user/edit_profile">Edit Profile</a>
     <div id='likes_middle'>
         <h2>Likes</h2>
         <div id='likes'>
