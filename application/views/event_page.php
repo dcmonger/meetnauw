@@ -15,6 +15,14 @@
 			<img class='event_pic' src='<?= base_url() ?>assets/img/james_franco.jpg' alt='james franco'class="img-rounded">
 			<p> This is some sample text about an event. You have 50% compatibility with this group and 68% max compatibility with any one person in this group</p>
 		</div>
+		<div class='event'>
+			<img class='event_pic' src='<?= base_url() ?>assets/img/james_franco.jpg' alt='james franco'class="img-rounded">
+			<p> This is some sample text about an event. You have 50% compatibility with this group and 68% max compatibility with any one person in this group</p>
+		</div>
+		<div class='event'>
+			<img class='event_pic' src='<?= base_url() ?>assets/img/james_franco.jpg' alt='james franco'class="img-rounded">
+			<p> This is some sample text about an event. You have 50% compatibility with this group and 68% max compatibility with any one person in this group</p>
+		</div>
 	</div>
 	<div id='add_event'>
 		<h2>Suggest an Event</h2>
