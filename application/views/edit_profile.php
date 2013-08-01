@@ -1,19 +1,5 @@
 <?php $this->load->view("partials/header") ?>
-<link rel='stylesheet' type='text/css' href="<?= base_url() ?>/assets/edit_prof.css">
-</head>
-<body>
-    <div id='banner'>
-        <img id="back" src="<?= base_url() ?>assets/jumpingpeople.jpg" alt="banner">
-        <div id='stuff_back'></div>
-    </div>
-    <div id='stuff_wrapper'>
-        <div class='navbar navbar-inverse'>
-            <div class="pull-right">
-                <a class="btn btn-default" href="#">Profile</a>
-                <a class="btn btn-default" href="#">Events</a>
-                <a class="btn btn-default" href="<?= base_url() ?>welcome">Logout</a>
-            </div>
-        </div>
+<?php $this->load->view('partials/normal_navbar') ?>
         <div id='edit_info'>
             <h2>Edit info</h2>
             <? echo validation_errors();?>
