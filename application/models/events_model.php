@@ -13,14 +13,13 @@ class Events_model extends CI_Model
 								 WHERE events = '{$events['user']}'"
 								 )->row();	
 	}
-	public function make_event($events)
+	public function add_event($events)
 	{
-		return $this->db->where('events', $events['user'])
-						->insert
+		return $this->db->insert('events', $events['user']);
 	}
 	public function delete_event($events)
 	{
-		return $this->db->delete('mytable', array('id' => $id));
+		return $this->db->delete('events', array('id' => $id));
 	}
 }	
 ?>

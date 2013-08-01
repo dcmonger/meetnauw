@@ -34,6 +34,10 @@ class Users_model extends CI_Model
             return false;
         }
     }
+    protected function edit_user($user)
+    {
+    	return $this->db->update('users',$user, array('id' => $_POST['id']));
+    }
 }
 
 ?>

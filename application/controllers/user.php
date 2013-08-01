@@ -60,8 +60,22 @@ class User extends CI_Controller
 		redirect(base_url('/user/login'));
 	}
 
-    public function profile() {
+    public function profile() 
+    {
         $this->load->view("event_page");
+    }
+    protected function edit_profile()
+    {
+    	$this->load->model('users_model');
+    	$data = array();
+        $data['first_name'] = $this->input->post('first_name');
+        $data['last_name'] = $this->input->post('last_name');
+        $data['password'] = $this->input->post('password');
+        $data['email'] = $this->input->post('email');
+        $data['created_at'] = date('Y-m-d'); 
+        $this->users_model->edit_user($data);
+        $this->session->set_userdata('user_session', $user);
+        redirect(base_url('/user/edit_profile'));
     }
 }
 
