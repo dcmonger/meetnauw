@@ -34,7 +34,7 @@
 		<h2>Suggest an Event</h2>
 		<form>
 			<input id='event_title' type='text' value='Event Title' class="form-control"><br /><br />
-			<textarea rows='4' cols='40' value='Event Description'></textarea class="form-control"><br /><br />
+			<textarea class="form-control" rows='4' cols='40' value='Event Description'></textarea class="form-control"><br /><br />
 			<input type='submit' value='Add an Event' class="btn btn-default">
 		</form>
 	</div>
