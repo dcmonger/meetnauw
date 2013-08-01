@@ -1,11 +1,38 @@
 * {
-	font-family: Helvetica;
+	color: white;
 }
 
-#pic {
-	background-image:url('james_franco.jpg');
-	background-repeat: no-repeat;
-	background-size: 70%;
+#banner {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    z-index: -2;
+}
+
+#back {
+	position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    min-width: 50%;
+    min-height: 50%;
+    z-index: -2;
+}
+
+#stuff_back {
+	position: absolute;
+	width: 100%;
+	height:100%;
+	background-color: blue;
+	opacity: 0.4;
+	z-index: -1;
+}
+
+img {
 	width: 150px;
 	height: 200px;
 	margin: 20px;
@@ -16,20 +43,12 @@ h1 {
 	float: left;
 }
 
-#scrolling_likes_bar {
-	height: 20px;
-	width: 100%;
-	border: 1px solid black;
-	clear: both;
+#middle {
+	width: 400px;
+	height: 700px;
+	margin-top: 150px;
 }
 
-h2, .a_like {
-	color: white;
-	background-color: #0B545D;
-	clear: both;
-	width: 300px;
-	margin-left: 200px;
-}
 
 form {
 	margin-top: 50px;
