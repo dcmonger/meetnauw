@@ -94,11 +94,22 @@
 
 /*likes sorter page stuff*/
 
+#picture_upload {
+    margin: 20px;
+    float: left;
+}
+
 #face {
     width: 150px;
     height: 200px;
-    margin: 20px;
-    float: left;
+}
+
+#picture_upload form {
+    margin-top: 20px;
+}
+
+#picture_upload input {
+    width: 200px;
 }
 
 #edit_prof {
@@ -109,19 +120,19 @@
 
 #likes_title_1 {
     float: left;
+    margin-left: 50px;
 }
 
 #likes_middle {
     width: 400px;
     height: 700px;
     margin-top: 150px;
+    margin-left: 300px;
 }
 
 
 #input_likes {
     margin-top: 50px;
-    margin-left: 200px;
-}
 
 /*sign in stuff*/
 

@@ -1,6 +1,11 @@
 <?php $this->load->view('partials/header') ?>
 <?php $this->load->view('partials/normal_navbar') ?>
-    <img id = 'face' src= 'assets/img/james_franco.jpg' alt='james franco' class="img-rounded">
+    <div id='picture_upload'>
+        <img id = 'face' src= 'assets/img/james_franco.jpg' alt='james franco' class="img-rounded">
+        <form>
+            <input type="file" class="btn btn-default" name="image" id="image" />
+        </form>
+    </div>
     <h1 id='likes_title_1'>James Franco</h1>
     <a id='edit_prof' class="btn btn-default" href="<?= base_url() ?>user/edit_profile">Edit Profile</a>
     <div id='likes_middle'>
