@@ -21,5 +21,6 @@ class Events_model extends CI_Model
 	{
 		return $this->db->delete('events', array('id' => $id));
 	}
+	public function 
 }	
 ?>
