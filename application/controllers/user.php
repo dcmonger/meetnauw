@@ -63,11 +63,42 @@ class User extends CI_Controller
 
     public function profile() 
     {
-        $this->load->view("likes_sorter");
+            //if isset post item, then do a function that adds the like
+            //then do the rest of the stuff
+            if($this->input->post('item')){
+                $this->user_add_like();
+            }
+            $stuff = $this->session->userdata('user_session');
+            $this->load->model('likes_model');
+            $data['likes'] = $this->likes_model->get_likes();
+            $data['name'] = $stuff[0]->first_name;
+            $this->load->view("likes_sorter", $data);
+    }
+    public function show_all_likes()
+    {
+        $this->load->model('likes_model');
+        $data['likes'] = $this->likes_model->get_likes();
+        $this->load->view('likes_sorter', $data);
+    }
+    public function user_add_like()
+    {
+        $this->load->model('likes_model');
+        $data['likes'] = $this->input->post();
+        $this->likes_model->add_like($data['likes']);
+        $this->load->view('likes_sorter', add_like($data));
+    }
+    public function user_delete_like()
+    {
+        $this->load->model('likes_model');
+        $this->events_model->delete_like();
+        $data['likes'] = $this->input->post('likes');
+        $this->load->view('likes_sorter', delete_like($data));
     }
     public function events()
     {
-        $this->load->view('event_page');
+        $this->load->model('events_model');
+        $events['events'] = $this->events_model->get_all_events();
+        $this->load->view('event_page', $events);
     }
     public function edit_profile()
     {
