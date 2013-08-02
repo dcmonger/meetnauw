@@ -39,7 +39,6 @@ class Users_model extends CI_Model
         $id = $this->session->userdata('id');    
     	return $this->db->update('users', $user, array('id' => $id));
     }
-
 }
 
 ?>

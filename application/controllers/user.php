@@ -103,7 +103,7 @@ class User extends CI_Controller
             $this->session->set_userdata('user_session', $user);
             redirect(base_url('/user/profile'));
         } 
-    }
+    }  
 }
 
 
