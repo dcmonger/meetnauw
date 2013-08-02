@@ -26,6 +26,5 @@ class Event extends CI_Controller
     	$data['events'] = $this->input->post('events');
     	$this->load->view('event_page', delete_event($data));
     }
-      
 }
 ?>

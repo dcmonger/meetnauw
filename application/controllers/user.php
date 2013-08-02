@@ -69,6 +69,9 @@ class User extends CI_Controller
                 $this->user_add_like();
             }
             $stuff = $this->session->userdata('user_session');
+            // $stuff = $user_session;
+            // var_dump($this->user_session);
+            // die();
             $this->load->model('likes_model');
             $data['likes'] = $this->likes_model->get_likes();
             $data['name'] = $stuff[0]->first_name;
@@ -84,8 +87,8 @@ class User extends CI_Controller
     {
         $this->load->model('likes_model');
         $data['likes'] = $this->input->post();
-        $this->likes_model->add_like($data['likes']);
-        $this->load->view('likes_sorter', add_like($data));
+        $this->likes_model->add_like($data);
+        $this->load->view('likes_sorter', $likes);
     }
     public function user_delete_like()
     {
